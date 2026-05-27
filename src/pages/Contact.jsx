@@ -23,9 +23,9 @@ export default function Contact() {
           Open to interesting problems, full-time roles, and the occasional consulting engagement. The fastest way to reach me is email.
         </Reveal>
         <Reveal className="contact__links">
-          <a href="mailto:hello@adarshvijay.dev" className="btn btn--primary">say hi &rarr;</a>
-          <a href="#" className="btn btn--secondary">github</a>
-          <a href="#" className="btn btn--secondary">linkedin</a>
+          <a href="mailto:adarsh.vijay.v12@gmail.com" className="btn btn--primary">say hi &rarr;</a>
+          <a href="https://github.com/Adarshvijaycx" target="_blank" rel="noopener noreferrer" className="btn btn--secondary">github</a>
+          <a href="https://www.linkedin.com/in/adarsh-vijay-27685b289/" target="_blank" rel="noopener noreferrer" className="btn btn--secondary">linkedin</a>
         </Reveal>
       </div>
     </section>

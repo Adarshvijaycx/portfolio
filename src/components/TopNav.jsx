@@ -29,7 +29,7 @@ export default function TopNav() {
         <div className="top-nav__inner">
           <Link to="/" className="top-nav__brand">
             <span className="top-nav__brand-mark">A</span>
-            <span>adarsh.vijay</span>
+            <span className="top-nav__brand-text">adarsh.vijay</span>
           </Link>
           <ul className="top-nav__links">
             {links.map((l) => (
