@@ -517,6 +517,7 @@ em{font-style:italic;color:var(--orange-500)}
   opacity:var(--rain-opacity,.08);
   contain:layout paint;
 }
+[data-theme="dark"] .data-rain{opacity:calc(var(--rain-opacity,.08) * 3.5)}
 .data-rain__canvas{position:absolute;inset:0;width:100%;height:100%}
 .data-rain__fade{
   position:absolute;inset:0;pointer-events:none;z-index:1;
@@ -826,6 +827,7 @@ html{scroll-behavior:smooth}
   z-index:0;
   opacity:.2;
 }
+[data-theme="dark"] .game-of-life{opacity:.55}
 .game-of-life__canvas{display:block;width:100%;height:100%}
 
 /* ---------- Theme toggle (in status bar) ---------- */

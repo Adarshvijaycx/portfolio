@@ -33,6 +33,9 @@ export default function StatusBar({ pathLabel }) {
           <span className="status-bar__path-value">{pathLabel}</span>
         </div>
         <div className="status-bar__spacer" />
+        <div className="status-bar__seg status-bar__quote">
+          <span>The Most Effective Way to Do it, is to Do it</span>
+        </div>
         <div className="status-bar__seg">
           <span className="status-bar__np-icon">&#9654;</span>
           <span>Ready or Not</span>

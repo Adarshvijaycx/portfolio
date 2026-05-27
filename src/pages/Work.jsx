@@ -3,12 +3,20 @@ import Reveal from '../components/Reveal.jsx';
 import HoverDecrypt from '../components/HoverDecrypt.jsx';
 import LetterGlitch from '../components/LetterGlitch.jsx';
 import { projects } from '../data/projects.js';
+import useTheme from '../hooks/useTheme.js';
 
 export default function Work() {
+  const theme = useTheme();
+  const glitchColors =
+    theme === 'dark'
+      ? ['#1b5def', '#4a7ff7', '#b8bcc4']
+      : ['#1b5def', '#4a7ff7', '#191818'];
+
   return (
     <section className="page-section page-section--first" id="work">
       <LetterGlitch
-        glitchColors={['#1b5def', '#4a7ff7', '#191818']}
+        key={theme}
+        glitchColors={glitchColors}
         glitchSpeed={50}
         outerVignette
         smooth

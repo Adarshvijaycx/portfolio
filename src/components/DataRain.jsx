@@ -189,7 +189,8 @@ export default function DataRain({
       ctx.clearRect(0, 0, width, height);
       ctx.textAlign = 'center';
       ctx.textBaseline = 'top';
-      ctx.fillStyle = '#191818';
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      ctx.fillStyle = isDark ? '#b8bcc4' : '#191818';
       for (let i = 0; i < streams.length; i++) updateStream(streams[i]);
       for (let layer = 0; layer < DEPTH.length; layer++) {
         for (let i = 0; i < streams.length; i++) {

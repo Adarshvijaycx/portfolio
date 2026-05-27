@@ -157,12 +157,14 @@ export default function GameOfLife({
       const oy = (height - totalH) / 2;
       const g = globalOpacity;
       if (g <= 0) return;
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      const fillColor = isDark ? '184, 188, 196' : color;
       for (let y = 0; y < rows; y++) {
         for (let x = 0; x < cols; x++) {
           const i = y * cols + x;
           const op = cellOpacity[i];
           const a = (MIN_OPACITY + (MAX_OPACITY - MIN_OPACITY) * op) * g;
-          ctx.fillStyle = `rgba(${color}, ${a})`;
+          ctx.fillStyle = `rgba(${fillColor}, ${a})`;
           ctx.fillRect(ox + x * (cellSize + gap), oy + y * (cellSize + gap), cellSize, cellSize);
         }
       }
