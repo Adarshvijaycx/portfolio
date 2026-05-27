@@ -42,8 +42,10 @@ export default function Cursor() {
       cy += (my - cy) * 0.6;
       rx += (mx - rx) * 0.18;
       ry += (my - ry) * 0.18;
-      dot.style.transform = `translate(${cx}px,${cy}px)`;
-      ring.style.transform = `translate(${rx}px,${ry}px)`;
+      const dotR = dot.offsetWidth / 2;
+      const ringR = ring.offsetWidth / 2;
+      dot.style.transform = `translate(${cx - dotR}px,${cy - dotR}px)`;
+      ring.style.transform = `translate(${rx - ringR}px,${ry - ringR}px)`;
       if (hoveredEl) {
         const r = hoveredEl.getBoundingClientRect();
         target.style.transform = `translate(${r.left}px,${r.top}px)`;
