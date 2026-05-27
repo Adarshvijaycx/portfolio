@@ -28,6 +28,18 @@
         }
       })();
     </script>
+    <script>
+      (function () {
+        var q = window.location.search;
+        var m = q.match(/[?&]p=([^&]+)/);
+        if (m) {
+          var path = decodeURIComponent(m[1]);
+          var rest = q.replace(/[?&]p=[^&]+/, '').replace(/^&/, '?');
+          if (rest === '?') rest = '';
+          window.history.replaceState(null, '', path + rest + window.location.hash);
+        }
+      })();
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
