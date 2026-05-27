@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import ThemeToggle from './ThemeToggle.jsx';
 
 export default function StatusBar({ pathLabel }) {
   const [now, setNow] = useState('--:--:--');
@@ -26,6 +27,7 @@ export default function StatusBar({ pathLabel }) {
           <span className="status-bar__value">EXPLORING</span>
           <span className="status-bar__bracket">]</span>
         </div>
+        <ThemeToggle />
         <div className="status-bar__seg status-bar__path">
           <span className="status-bar__path-prefix">//</span>
           <span className="status-bar__path-value">{pathLabel}</span>
